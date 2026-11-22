@@ -6,7 +6,7 @@ edition = "2021"
 [workspace]
 
 [dependencies]
-cfsolve = { path = "..", default-features = false }
+cfsolve = { path = "..", default-features = false, features = ["internals"] }
 tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
 axum = "0.7"
 serde = { version = "1", features = ["derive"] }
