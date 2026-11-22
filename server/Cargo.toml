@@ -1,0 +1,18 @@
+[package]
+name = "cfsolve-server"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+
+[dependencies]
+cfsolve = { path = "..", default-features = false }
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+axum = "0.7"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[patch.crates-io]
+btls-sys = { path = "../vendor/btls-sys" }
+wreq = { path = "../vendor/wreq" }
+http2 = { path = "../vendor/http2" }
